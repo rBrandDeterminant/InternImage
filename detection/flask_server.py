@@ -7,6 +7,8 @@ import base64
 import numpy as np
 import cv2
 
+#from waitress import serve
+
 import get_bboxes as gb
 
 UPLOAD_FOLDER = 'uploads'
@@ -131,4 +133,5 @@ def process_API():
 if __name__ == '__main__':
     model = MODEL(CONFIG, CKPT, device=DEVICE)
 
-    app.run(debug=True)
+    app.run(host="127.0.0.1", port=5000, debug=True)
+    #serve(app, host="0.0.0.0", port=5000)

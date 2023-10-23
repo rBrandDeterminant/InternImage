@@ -137,6 +137,7 @@ def parse_args():
 
 
 def main(args):
+    args = parse_args()
     # build the model from a config file and a checkpoint file
     model = init_detector(CONFIG, CKPT, device=DEVICE)
 
@@ -144,7 +145,7 @@ def main(args):
     #test_get_bboxes(model, args.img, SCORE_TRESHOLD)
 
     #Get the dictionnary of classes containing bboxes
-    b_boxes = get_bboxes(model, args.img, SCORE_TRESHOLD)
+    b_boxes = get_bboxes(model, args.img, SCORE_TRESHOLD, show_im=True)
 
     mmcv.mkdir_or_exist(JSON_OUT)
     out_json = osp.join(JSON_OUT, osp.basename(args.img).split(".")[0] + ".json")
