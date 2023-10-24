@@ -64,19 +64,19 @@ def get_bboxes(model, img, treshold, show_im=False):
     dict[str : classes] = [
         {
             "bbox" : {
-                        "x" : x value,
-                        "y" : y value,
-                        "width" : width in pixel,
-                        "height" : height in pixel
+                        "x1" : first x coordinate,
+                        "y1" : first y coordinate,
+                        "x2" : second x coordinate,
+                        "y2" : second y coordinate
                     },
             "confidence" : confidence
         },
         {
             "bbox" : {
-                        "X" : x2 value,
-                        "Y" : y2 value,
-                        "Width" : width in pixel
-                        "Height" : height in pixel
+                        "x1" : first x coordinate,
+                        "y1" : first y coordinate,
+                        "x2" : second x coordinate,
+                        "y2" : second y coordinate
                     },
             "confidence" : confidence
         },
