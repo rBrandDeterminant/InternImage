@@ -29,7 +29,7 @@ conda activate internimage
 
 For examples, to install torch==1.11 with CUDA==11.3:
 ```bash
-pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113  -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117  -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 - Install `timm==0.6.11` and `mmcv-full==1.5.0`:
